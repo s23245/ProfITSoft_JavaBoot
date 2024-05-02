@@ -16,4 +16,7 @@ public interface HeroTeamRepository extends JpaRepository<HeroTeam, Long>
     Optional<HeroTeam> findByHeroTeamId(Long heroTeamId);
 
     List<HeroTeam> findByHeroesContains(Hero hero);
+
+    Optional<HeroTeam> findByHeroTeamName(String heroTeamName);
+
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "hero_team_name": "Team 1",
+    "hero_team_level": 1,
+    "hero_team_size": 3
+  },
+  {
+    "hero_team_name": "Team 2",
+    "hero_team_level": 2,
+    "hero_team_size": 4
+  },
+  {
+    "hero_team_name": "Team 3",
+    "hero_team_level": 3,
+    "hero_team_size": 5
+  }
+]

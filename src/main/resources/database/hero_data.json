@@ -1,0 +1,26 @@
+[
+  {
+    "hero_class_name": "Wizard",
+    "hero_level": 1,
+    "mana_amount": 100,
+    "abilities": "ability1, ability2, ability3",
+    "hero_main_element": "FIRE",
+    "hero_team_id": 1
+  },
+  {
+    "hero_class_name": "Wizard",
+    "hero_level": 1,
+    "mana_amount": 100,
+    "abilities": "ability1, ability2, ability3",
+    "hero_main_element": "FIRE",
+    "hero_team_id": 1
+  },
+  {
+  "hero_class_name": "Wizard",
+  "hero_level": 1,
+  "mana_amount": 100,
+  "abilities": "ability1, ability2, ability3",
+  "hero_main_element": "EARTH",
+  "hero_team_id": 1
+  }
+]

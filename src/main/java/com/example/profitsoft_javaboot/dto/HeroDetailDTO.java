@@ -3,8 +3,14 @@ package com.example.profitsoft_javaboot.dto;
 import com.example.profitsoft_javaboot.enums.HeroElements;
 import com.example.profitsoft_javaboot.model.Hero;
 import com.example.profitsoft_javaboot.model.HeroTeam;
+
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+
 
 import java.util.List;
 
@@ -12,12 +18,19 @@ import java.util.List;
 @Getter
 public class HeroDetailDTO
 {
+    @NotBlank(message = "Hero class name is mandatory")
     private String heroClassName;
+    @Min(value = 1, message = "Hero level must be at least 1")
     private int heroLevel;
+    @Min(value = 1, message = "Mana amount must be at least 1")
     private int manaAmount;
+    @Nullable
     private String abilities;
+    @NotNull(message = "Hero main element is mandatory")
     private HeroElements heroMainElement;
+    @NotNull(message = "Hero team id is mandatory")
     private Long heroTeamId;
+    @Nullable
     private HeroTeam heroTeam;
 
     public HeroDetailDTO()
@@ -55,6 +68,18 @@ public class HeroDetailDTO
         this.heroMainElement = hero.getHeroMainElement();
     }
 
+    public HeroDetailDTO(Hero heroValue, @Nullable HeroTeam heroTeam, Long heroTeamId)
+    {
+        this.heroClassName = heroValue.getHeroClassName();
+        this.heroLevel = heroValue.getHeroLevel();
+        this.manaAmount = heroValue.getManaAmount();
+        this.abilities = heroValue.getAbilities();
+        this.heroMainElement = heroValue.getHeroMainElement();
+        this.heroTeam = heroTeam;
+        this.heroTeamId = heroTeamId;
+    }
+
+
     @Override
     public String toString() {
         return "HeroDetailDTO{" +
@@ -66,4 +91,5 @@ public class HeroDetailDTO
                 ", heroTeam=" + heroTeam +
                 '}';
     }
+
 }

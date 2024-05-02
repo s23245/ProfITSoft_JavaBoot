@@ -16,17 +16,18 @@ import java.util.Collections;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "hero_team")
 public class HeroTeam
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long heroTeamId;
 
     private String heroTeamName;
     private int heroTeamLevel;
     private int heroTeamSize;
 
-    @OneToMany(mappedBy = "heroTeam",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "heroTeam",fetch = FetchType.EAGER)
     @JsonBackReference
     private Collection<Hero> heroes;
 }

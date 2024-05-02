@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="bohdanmacbook (generated)">
+        <createSequence incrementBy="50" sequenceName="hero_seq"/>
+    </changeSet>
+    <changeSet id="2" author="bohdanmacbook (generated)">
+        <createSequence incrementBy="50" sequenceName="hero_team_seq"/>
+    </changeSet>
+
+    <changeSet id="3" author="bohdanmacbook">
+        <insert tableName="hero_team">
+            <column name="hero_team_name" value="Team 1"/>
+            <column name="hero_team_level" valueNumeric="1"/>
+            <column name="hero_team_size" valueNumeric="3"/>
+        </insert>
+        <insert tableName="hero_team">
+            <column name="hero_team_name" value="Team 2"/>
+            <column name="hero_team_level" valueNumeric="2"/>
+            <column name="hero_team_size" valueNumeric="4"/>
+        </insert>
+        <insert tableName="hero_team">
+            <column name="hero_team_name" value="Team 3"/>
+            <column name="hero_team_level" valueNumeric="3"/>
+            <column name="hero_team_size" valueNumeric="5"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

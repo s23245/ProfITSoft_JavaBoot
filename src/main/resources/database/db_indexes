@@ -1,0 +1,3 @@
+CREATE INDEX indx1 ON hero(hero_class_name);
+CREATE INDEX indx2 ON hero_team(hero_team_name);
+CREATE INDEX indx3 ON hero_team(hero_team_id);

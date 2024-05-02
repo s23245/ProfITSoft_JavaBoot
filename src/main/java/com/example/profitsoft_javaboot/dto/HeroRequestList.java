@@ -12,6 +12,8 @@ public class HeroRequestList
 {
     private Long heroTeamId;
     private String heroTeamName;
+    private String heroClassName;
+
     private int page;
     private int size;
 }
