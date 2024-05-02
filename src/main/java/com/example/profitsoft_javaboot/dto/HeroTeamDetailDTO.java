@@ -1,14 +1,10 @@
 package com.example.profitsoft_javaboot.dto;
 
-import com.example.profitsoft_javaboot.model.Hero;
 import com.example.profitsoft_javaboot.model.HeroTeam;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.sql.ast.tree.expression.Collation;
-
-import java.util.Collection;
 
 @Getter
 @Setter

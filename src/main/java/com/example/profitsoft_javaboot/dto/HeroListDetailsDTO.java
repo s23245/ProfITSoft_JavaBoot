@@ -3,8 +3,6 @@ package com.example.profitsoft_javaboot.dto;
 import com.example.profitsoft_javaboot.enums.HeroElements;
 import lombok.*;
 
-import java.io.Serializable;
-
 /**
  * DTO for {@link com.example.profitsoft_javaboot.model.Hero}
  */

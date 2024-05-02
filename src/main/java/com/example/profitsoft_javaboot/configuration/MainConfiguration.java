@@ -1,17 +1,14 @@
 package com.example.profitsoft_javaboot.configuration;
 
 
-import com.example.profitsoft_javaboot.service.HeroService;
-import com.example.profitsoft_javaboot.service.HeroTeamService;
 import liquibase.integration.spring.SpringLiquibase;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import javax.sql.DataSource;
 
@@ -26,6 +23,7 @@ public class MainConfiguration
 
     @Value("${spring.liquibase.password}")
     private String password;
+
 
     @Bean
     @ConfigurationProperties("spring.liquibase")
