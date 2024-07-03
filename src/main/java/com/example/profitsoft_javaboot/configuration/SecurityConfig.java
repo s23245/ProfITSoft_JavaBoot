@@ -1,4 +1,4 @@
-package com.example.profitsoftbackend.security;
+package com.example.profitsoft_javaboot.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
