@@ -20,6 +20,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -30,6 +31,7 @@ import java.util.*;
 @RequiredArgsConstructor
 public class HeroService
 {
+
     private final HeroRepository heroRepository;
     private final HeroTeamRepository heroTeamRepository;
     private final Validator validator;
